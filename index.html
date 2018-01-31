@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Maze</title>
+		<title>Maze</title>
+		<link rel="shortcut icon" type="image/x-icon" href="assets/images/maze.ico" media="screen" />
+		<!--浏览器小图标-->
+		<link rel="Bookmark" href="assets/images/maze.ico" />
+		<script type="text/javascript" src="js/phaser.min.js"></script>
+		<script type="text/javascript" src="js/boot.js"></script>
+		<script type="text/javascript" src="js/preload.js"></script>
+		<script type="text/javascript" src="js/mainMenu.js"></script>
+		<script type="text/javascript" src="js/start.js"></script>
+		<script type="text/javascript" src="js/begin.js"></script>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				background: #3A3A3C;
+			}
+			
+			#container{
+				height: 100%;
+				width: 100%;
+				text-align: center;
+			}
+			
+			#maze {
+				width: 800px;
+				height: 608px;
+				position: relative;
+				margin: 40px auto;
+			}
+			canvas {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="maze"></div>
+		</div>
+		<script>
+			var game = new Phaser.Game(800, 608, Phaser.CANVAS , "maze");
+            game.state.add('Boot', boot);
+            game.state.add('Preload', preload);
+            game.state.add('Main', mainMenu);
+            game.state.add('Start', start);
+            game.state.add('Begin', begin);
+            game.state.start('Boot');
+		</script>
+	</body>
+
+</html>
