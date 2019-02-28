@@ -1,3 +1,4 @@
 # Maze
 Dec. 2017
-<h1>Hello World</h1>
+<h2>A maze game</h2>
+<p>demo address: https://haleyysz.github.io/Maze/</p>
